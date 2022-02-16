@@ -9,7 +9,7 @@ RUN yarn build
 FROM nginxinc/nginx-unprivileged:1-alpine
 
 WORKDIR /app
-COPY --from=frontend-builder /app/build ./www
+COPY --from=frontend-builder /app/dist ./www
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 

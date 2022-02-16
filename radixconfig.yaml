@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: flow-landingpage-test
+  name: flow-landpage-test
 spec:
   environments:
     - name: dev

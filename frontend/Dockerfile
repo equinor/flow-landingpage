@@ -1,7 +1,7 @@
-FROM nginxinc/nginx-unprivileged:1-alpine
+FROM node:17.5.0-alpine as frontend-builders
 
 WORKDIR /app
-COPY /app .
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 8001
+COPY . .
+RUN yarn
+RUN ls
+RUN yarn build

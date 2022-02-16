@@ -1,0 +1,15 @@
+.flowlogo img{
+    width: 250px;
+}
+
+.cardPics{
+    width: 200px
+}
+
+.panelCards {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+  }

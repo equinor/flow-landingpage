@@ -1,0 +1,13 @@
+.flowlogo {
+    width: 120px;
+}
+
+.navbar{
+    transition: all .7s ease-in;
+}
+
+.scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+}

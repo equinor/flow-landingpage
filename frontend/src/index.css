@@ -1,0 +1,28 @@
+body {
+  margin: 1;
+  font-family: Equinor;
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+body::before{
+  background: url(/equinor_logo.svg);
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 70%
+}
+*/
+
+code {
+  font-family: Equinor;
+}

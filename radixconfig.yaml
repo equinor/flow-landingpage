@@ -4,6 +4,9 @@ metadata:
   name: flow-landpage-test
 spec:
   environments:
+    - name: prod
+      build:
+        from: master
     - name: dev
       build:
         from: master

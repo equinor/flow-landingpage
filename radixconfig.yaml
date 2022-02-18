@@ -33,4 +33,4 @@ spec:
                 connectionUrl: redis://redis:6379
   dnsAppAlias:
     environment: dev
-    component: auth-proxy
+    component: frontend

@@ -26,7 +26,7 @@ spec:
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
-              scope: openid profile email offline_access 0e595101-1f08-4ce0-8684-148b2e2b8e18/.default
+              scope: openid profile email offline_access
               setXAuthRequestHeaders: true
               setAuthorizationHeader: false
               sessionStoreType: redis

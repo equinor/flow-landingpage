@@ -15,8 +15,7 @@ spec:
       ports:
         - name: redis
           port: 6379
-    - name: frontend
-      src: frontend
+    - name: web
       ports:
         - name: http
           port: 8001
@@ -33,4 +32,4 @@ spec:
                 connectionUrl: redis://redis:6379
   dnsAppAlias:
     environment: dev
-    component: frontend
+    component: web

@@ -5,6 +5,7 @@ node_modules
 
 # local environment
 .env
+secrets
 
 # misc
 .DS_Store

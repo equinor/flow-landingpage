@@ -30,10 +30,10 @@ services:
     environment:
       - OAUTH2_PROXY_PROVIDER=oidc # https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc
       - OAUTH2_PROXY_OIDC_ISSUER_URL=https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/v2.0
-      - OAUTH2_PROXY_CLIENT_ID=${OAUTH2_PROXY_CLIENT_ID}
+      - OAUTH2_PROXY_CLIENT_ID=d826142e-d4f6-4664-b463-6d99fc81fb90
       - OAUTH2_PROXY_CLIENT_SECRET=${OAUTH2_PROXY_CLIENT_SECRET}
       - OAUTH2_PROXY_COOKIE_SECRET=${OAUTH2_PROXY_COOKIE_SECRET}
-      - OAUTH2_PROXY_SCOPE=openid email offline_access ${API_RESOURCE_ID}/user_impersonation # resource client id
+      - OAUTH2_PROXY_SCOPE=openid email offline_access 3b2b84f5-a04e-49d4-a403-b36a1fe0f28c/.default # resource client id
       - OAUTH2_PROXY_REDIRECT_URL=http://localhost:8000/oauth2/callback
       - OAUTH2_PROXY_HTTP_ADDRESS=http://:8000
       - OAUTH2_PROXY_UPSTREAMS=http://frontend:8001

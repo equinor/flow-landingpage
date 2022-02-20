@@ -49,9 +49,3 @@ services:
       - radix-example-front-proxy
     ports:
       - "8000:8000" # In prod, this is served on port 443
-
-secrets:
-  OAUTH2_PROXY_CLIENT_SECRET:
-    file: secrets/OAUTH2_PROXY_CLIENT_SECRET.txt
-  OAUTH2_PROXY_COOKIE_SECRET:
-    file: secrets/OAUTH2_PROXY_COOKIE_SECRET.txt

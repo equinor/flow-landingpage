@@ -22,7 +22,7 @@ spec:
           clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
           scope: openid profile email offline_access
           setXAuthRequestHeaders: true
-          setAuthorizationHeader: false
+          setAuthorizationHeader: true
           sessionStoreType: redis
           redisStore:
              connectionUrl: redis://redis:6379

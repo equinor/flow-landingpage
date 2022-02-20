@@ -26,10 +26,10 @@ spec:
           sessionStoreType: redis
           redisStore:
              connectionUrl: redis://redis:6379
-          publicPort: http
-          ports:
-            - name: http
-              port: 8001
+      publicPort: http
+      ports:
+        - name: http
+          port: 8001
 
   dnsAppAlias:
     environment: dev

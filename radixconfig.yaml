@@ -19,7 +19,7 @@ spec:
       src: frontend
       authentication:
         oauth2:
-          clientId: 28ef3ad2-5a58-439d-827a-5d4bdc7f49f5
+          clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
           scope: openid profile email offline_access
           setXAuthRequestHeaders: true
           setAuthorizationHeader: false

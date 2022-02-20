@@ -17,24 +17,20 @@ spec:
           port: 6379
     - name: frontend
       src: frontend
-      publicPort: http
-      ports:
-        - name: http
-          port: 8001
-      environmentConfig:
-        - environment: dev
-          authentication:
-            oauth2:
-              clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
-              scope: openid profile email offline_access d826142e-d4f6-4664-b463-6d99fc81fb90/user.read
-              setXAuthRequestHeaders: true
-              setAuthorizationHeader: false
-              proxyPrefix: /oauth2
-              loginUrl: https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/oauth2/v2.0/authorize
-              redeemUrl: https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/oauth2/v2.0/token
-              sessionStoreType: redis
-              redisStore:
-                connectionUrl: redis://redis:6379
+      authentication:
+        oauth2:
+          clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
+          scope: openid profile email offline_access
+          setXAuthRequestHeaders: true
+          setAuthorizationHeader: false
+          sessionStoreType: redis
+          redisStore:
+             connectionUrl: redis://redis:6379
+          publicPort: http
+          ports:
+            - name: http
+              port: 8001
+
   dnsAppAlias:
     environment: dev
     component: frontend

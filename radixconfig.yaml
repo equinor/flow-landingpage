@@ -19,10 +19,10 @@ spec:
       src: frontend
       authentication:
         oauth2:
-          clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
+          clientId: 28ef3ad2-5a58-439d-827a-5d4bdc7f49f5
           scope: openid profile email offline_access
           setXAuthRequestHeaders: true
-          setAuthorizationHeader: true
+          setAuthorizationHeader: false
           sessionStoreType: redis
           redisStore:
              connectionUrl: redis://redis:6379

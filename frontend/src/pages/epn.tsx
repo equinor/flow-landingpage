@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Icon, Card, Typography, Button } from '@equinor/eds-core-react'
 import Popup from '../components/popup';
+import MaintenanceService from '../services/MaintenanceService'
 import './pages.css'
 import { beat, platform } from "@equinor/eds-icons"
 Icon.add({ beat, platform });
@@ -14,6 +15,7 @@ const EPN = () => {
   };
 
   const openPage = (url: string) => {
+    MaintenanceService.getResponse()
     window.open(url);
   };
 

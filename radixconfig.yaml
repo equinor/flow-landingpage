@@ -17,6 +17,8 @@ spec:
           port: 6379
     - name: frontend
       src: frontend
+      secrets:
+        - APIM_SUB_KEY
       publicPort: http
       ports:
         - name: http

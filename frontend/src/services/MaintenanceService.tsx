@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiClient = axios.create({
-    baseURL: "http://localhost:8000/api/maintenace_dev",
+    baseURL: "http://localhost:8080/api/maintenance_dev",
     headers: {
       "Accept": "*/*",
       "Ocp-Apim-Subscription-Key": "e4624c386c344c76a7b9b795739d0462" // use env var

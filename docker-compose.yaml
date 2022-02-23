@@ -6,15 +6,44 @@ networks:
 
 services:
 
-  frontend:
-    build:
-      context: frontend
-    image: radix-example-front-proxy-frontend
-    container_name: radix-example-front-proxy-frontend_container
+  frontend:    
+    image: node:17.5.0-alpine
+    container_name: radix-web_container
+    stdin_open: true # because of https://github.com/facebook/create-react-app/issues/8688
+    working_dir: /app
+    command: [ "sh", "-c", "yarn && yarn dev" ]
+    #environment:
+        #- npm_config_proxy=${NPM_PROXY}
+    volumes:
+      - type: bind
+        source: ./frontend
+        target: /app
+      - type: bind
+        source: ./frontend/node_modules
+        target: /app/node_modules
     networks:
       - radix-example-front-proxy
     ports:
-      - "8001:8001" # For local debug only; not exposed in prod
+      - "3000:3000"
+      #- "9222:9222"
+
+  proxy:
+    image: nginxinc/nginx-unprivileged:1.18
+    container_name: radix-proxy_container
+    environment:
+      - APIM_SUB_KEY=${APIM_SUB_KEY}
+    volumes:
+      - type: bind
+        source: ./frontend/nginx.dev.conf
+        target: /default.conf
+      - type: bind
+        source: ./frontend/run_nginx.sh
+        target: /run_nginx.sh
+    command: [ "/bin/bash", "-c", ". run_nginx.sh" ]
+    networks:
+      - radix-example-front-proxy
+    ports:
+      - "8080:8080"
 
   auth-state:
     image: redis:5-alpine
@@ -25,7 +54,7 @@ services:
       - "6379:6379"
 
   auth:
-    image: quay.io/oauth2-proxy/oauth2-proxy:v7.1.3
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
     container_name: radix-example-front-proxy-auth_container
     environment:
       - OAUTH2_PROXY_PROVIDER=oidc # https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc
@@ -36,7 +65,7 @@ services:
       - OAUTH2_PROXY_SCOPE=openid email offline_access ${API_RESOURCE_ID}/user_impersonation # resource client id
       - OAUTH2_PROXY_REDIRECT_URL=http://localhost:8000/oauth2/callback
       - OAUTH2_PROXY_HTTP_ADDRESS=http://:8000
-      - OAUTH2_PROXY_UPSTREAMS=http://frontend:8001
+      - OAUTH2_PROXY_UPSTREAMS=http://proxy:8080
       - OAUTH2_PROXY_COOKIE_REFRESH=60m
       - OAUTH2_PROXY_REDIS_CONNECTION_URL=redis://auth-state:6379 # Where to store session info (the auth-state component)
       - OAUTH2_PROXY_SESSION_STORE_TYPE=redis # We're using Redis for storing session info instead of cookies (cookies would get too big for Edge and Safari)

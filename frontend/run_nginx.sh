@@ -2,6 +2,7 @@
 
 envsubst '
 ${APIM_SUB_KEY}
+${APIM_HOST}
 ' </default.conf > /etc/nginx/conf.d/tmp.conf
 
 mv /etc/nginx/conf.d/tmp.conf /etc/nginx/conf.d/default.conf

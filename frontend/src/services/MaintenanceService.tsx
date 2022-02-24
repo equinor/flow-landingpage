@@ -1,17 +1,16 @@
 import axios from "axios";
 const apiClient = axios.create({
-    baseURL: "http://localhost:8080/api/maintenance_dev",
+    baseURL: `${window.location.protocol}//${window.location.host}/api/maintenance`,
     headers: {
       "Accept": "*/*",
-      "Ocp-Apim-Subscription-Key": "e4624c386c344c76a7b9b795739d0462" // use env var
     },
   });
 
 const getResponse = () => {
 
-    apiClient.get('/work-orders-optimized-for-query', {params: {
-        ID: 12,
-        ID1: 22
+    apiClient.get('/work-orders', {params: {
+        'api-version': 'v1',
+        'filter': 'recently-changed'
         }
     })
     .then(function (response) {
@@ -23,6 +22,9 @@ const getResponse = () => {
 
         return response.status;
     })
+    .catch(function (error) {
+        console.log(error)
+    });
 
 }
 

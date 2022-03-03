@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Icon, Card, Typography, Button } from '@equinor/eds-core-react'
-import Popup from '../components/popup';
+import CustomDialog from '../components/customdialog'
 import MaintenanceService from '../services/MaintenanceService'
 import './pages.css'
 import { beat, platform } from "@equinor/eds-icons"
@@ -8,11 +8,6 @@ Icon.add({ beat, platform });
 
 const EPN = () => {
 
-  const [visibility, setVisibility] = useState(false);
-
-  const popupCloseHandler = (e:any) => {
-    setVisibility(e);
-  };
 
   const openPage = (url: string) => {
     MaintenanceService.getResponse()
@@ -43,10 +38,7 @@ const EPN = () => {
 
         </Card.Header>
         <Card.Actions>
-          <Button type="button" color="secondary" onClick={(e) => setVisibility(!visibility)}>
-            Test access
-            <Icon name="beat"></Icon>
-          </Button>
+     
           <Button type="button" onClick={() => openPage(element.link)}>
             Open
             <Icon name="platform"></Icon>
@@ -64,17 +56,11 @@ const EPN = () => {
     <div>
       <h2>Welcome to EPN</h2>
       <p>Bla bla bla</p>
+      
       <br />
       <div className="panelCards">
         {appsList}
       </div>
-      <Popup
-        onClose={popupCloseHandler}
-        show={visibility}
-        title="Testing access">
-        <h1>Hello This is Popup Content Area</h1>
-        <h2>This is my lorem ipsum text here!</h2>
-      </Popup>
 
     </div>
   );

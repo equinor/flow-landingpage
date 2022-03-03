@@ -1,13 +1,20 @@
 import React, {useEffect} from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { TopBar, Button } from '@equinor/eds-core-react';
+import { TopBar, Button, Tabs } from '@equinor/eds-core-react';
 import './navbar.css';
 import flowlogo from '/flowlogo.png';
 
   
 const NavBar = () => {
-    const [scrolled,setScrolled]=React.useState(false);
+    const [scrolled,setScrolled] = React.useState(false);
+    const [activeTab, setActiveTab] = React.useState(0)
     let navigate = useNavigate();
+
+    const handleChange = (index: number) => {
+        console.log(index)
+        setActiveTab(index)
+        
+      }
 
     function handleClick(path:string) {
         navigate(path);
@@ -39,9 +46,12 @@ const NavBar = () => {
                 <Link to="/"><img className="flowlogo" src={flowlogo} alt="" /> </Link> 
             </TopBar.Header>
             <TopBar.CustomContent>
-                <Button type="button" onClick={() => handleClick("/epn")}>EPN</Button>
-                { ' ' }
-                 
+                <Tabs activeTab={activeTab} onChange={handleChange}>
+                    <Tabs.List>
+                        <Link to={`/flx`}><Tabs.Tab>FLX</Tabs.Tab></Link>
+                        <Link to={`/epn`}><Tabs.Tab>EPN</Tabs.Tab></Link>
+                    </Tabs.List>
+                </Tabs>
             </TopBar.CustomContent>
         </TopBar>
     );

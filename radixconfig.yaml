@@ -34,3 +34,8 @@ spec:
   dnsAppAlias:
     environment: dev
     component: frontend
+  
+  dnsExternalAlias:
+    - alias: flow-dev.equinor.com 
+      environment: dev
+      component: frontend

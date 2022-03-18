@@ -39,3 +39,10 @@ spec:
     - alias: flow-dev.equinor.com 
       environment: dev
       component: frontend
+    - alias: flow-qa.equinor.com
+      environment: dev
+      component: frontend
+    - alias: flow.equinor.com
+      environment: dev
+      component: frontend
+

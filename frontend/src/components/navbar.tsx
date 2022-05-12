@@ -39,7 +39,7 @@ const NavBar = () => {
                 <Link to="/"><img className="flowlogo" src={flowlogo} alt="" /> </Link> 
             </TopBar.Header>
             <TopBar.CustomContent>
-                <Button type="button" onClick={() => handleClick("/epn")}>EPN</Button>
+                <Button type="button" onClick={() => handleClick("/info")}>Info</Button>
                 { ' ' }
                  
             </TopBar.CustomContent>

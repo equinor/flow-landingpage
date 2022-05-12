@@ -61,8 +61,8 @@ const Info = () => {
 
   return (
     <div>
-      <h2>Welcome to EPN</h2>
-      <p>Bla bla bla</p>
+      <h2>FLOW</h2>
+      <p></p>
       <br />
       <div className="panelCards">
         {appsList}

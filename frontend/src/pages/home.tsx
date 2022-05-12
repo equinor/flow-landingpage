@@ -20,7 +20,7 @@ const Info = () => {
   const appsList = [
     { title: "EPN - Maintenance FV", description: "Blabla", image: "/projects.png", link: "https://flow.equinor.com/epn" },
     { title: "FLX - Maintenance FV", description: "Blabla", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
-    { title: "FLX - Modifications Projects", description: "Blabla", image: "/grane.png", link: "https://flow.equinor.com/project" }
+    { title: "FLX - Modifications Projects", description: "Blabla", image: "/grane.png", link: "https://flow.equinor.com/project" },
     { title: "FLX - Procurement", description: "Blabla", image: "/procurement.png", link: "https://flow.equinor.com/procurement" }
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "350px" };

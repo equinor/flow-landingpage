@@ -21,7 +21,7 @@ const Info = () => {
     { title: "EPN - Maintenance PM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
     { title: "FLX - Maintenance PM", description: "", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow.equinor.com/project" },
-    { title: "FLX - Procurement", description: "", image: "/procurement.png", link: "https://flow.equinor.com/procurement" }
+    { title: "FLX - SCM", description: "", image: "/procurement.png", link: "https://flow.equinor.com/scm" }
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "350px" };
 

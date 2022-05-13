@@ -18,8 +18,8 @@ const Info = () => {
   };
 
   const appsList = [
-    { title: "EPN - Maintenance FV", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
-    { title: "FLX - Maintenance FV", description: "", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
+    { title: "EPN - Maintenance PM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
+    { title: "FLX - Maintenance PM", description: "", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow.equinor.com/project" },
     { title: "FLX - Procurement", description: "", image: "/procurement.png", link: "https://flow.equinor.com/procurement" }
   ].map((element, index) => {

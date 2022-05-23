@@ -63,6 +63,7 @@ const Info = () => {
     <div>
       <h2>FLOW</h2>
       <p></p>
+
       <br />
       <div className="panelCards">
         {appsList}
@@ -74,6 +75,7 @@ const Info = () => {
         <h1>Hello This is Popup Content Area</h1>
         <h2>This is my lorem ipsum text here!</h2>
       </Popup>
+      {renderSurvey("","","landingpage","home")}
 
     </div>
   );

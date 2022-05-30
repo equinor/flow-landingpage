@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate } from 'react-router-dom';
 import { Button } from '@equinor/eds-core-react';
+declare var renderSurvey: any;
   
 export default function Home() {
     return (

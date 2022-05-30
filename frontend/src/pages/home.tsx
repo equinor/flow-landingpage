@@ -4,8 +4,10 @@ import Popup from '../components/popup';
 import './pages.css'
 import { beat, platform } from "@equinor/eds-icons"
 Icon.add({ beat, platform });
+declare var renderSurvey: any;
 
 const Info = () => {
+
 
   const [visibility, setVisibility] = useState(false);
 
@@ -16,6 +18,7 @@ const Info = () => {
   const openPage = (url: string) => {
     window.open(url);
   };
+
 
   const appsList = [
     { title: "EPN - Maintenance PM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },

@@ -45,4 +45,7 @@ spec:
     - alias: flow.equinor.com
       environment: dev
       component: frontend
+    - alias: pega.equinor.com
+      environment: dev
+      component: frontend
 

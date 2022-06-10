@@ -12,6 +12,10 @@ const NavBar = () => {
     function handleClick(path:string) {
         navigate(path);
       }
+
+      const openPage = (url: string) => {
+        window.open(url);
+      };
     
     const handleScroll=() => {
         const offset=window.scrollY;
@@ -39,7 +43,7 @@ const NavBar = () => {
                 <Link to="/"><img className="flowlogo" src={flowlogo} alt="" /> </Link> 
             </TopBar.Header>
             <TopBar.CustomContent>
-                <Button type="button" onClick={() => handleClick("/info")}>Info</Button>
+                <Button type="button" onClick={() => openPage("https://web.yammer.com/main/org/statoil.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMDk2OTkwODgzODQifQ/all")}>Release notes</Button>
                 { ' ' }
                  
             </TopBar.CustomContent>

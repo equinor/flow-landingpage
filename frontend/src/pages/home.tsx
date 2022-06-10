@@ -66,9 +66,6 @@ const Info = () => {
 
   return (
     <div>
-      <h2>FLOW</h2>
-      <p></p>
-
       <br />
       <div className="panelCards">
         {appsList}

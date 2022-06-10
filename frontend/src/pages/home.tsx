@@ -45,7 +45,7 @@ const Info = () => {
 
         </Card.Header>
         <Card.Actions>
-          /** 
+          <!-- 
           <Button type="button" color="secondary" onClick={(e) => setVisibility(!visibility)}>
             Test access
             <Icon name="beat"></Icon>
@@ -55,7 +55,7 @@ const Info = () => {
             <Icon name="platform"></Icon>
           </Button>
         </Card.Actions>
-        */
+        -->
       </Card>
     );
 

@@ -6,10 +6,19 @@
     <link rel="stylesheet" href="https://eds-static.equinor.com/font/equinor-font-vf.css" />
     <link rel="stylesheet" href="https://eds-static.equinor.com/font/equinor-mono.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://mfpembedcdnweu.azureedge.net/mfpembedcontweu/Embed.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://mfpembedcdnweu.azureedge.net/mfpembedcontweu/Embed.css" />
     <title>Equinor FLOW</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type = "text/javascript" >
+      function renderSurvey(FirstName, LastName, application, pstep){
+      var se = new SurveyEmbed("NaKkOuK21UiRlX_PBbRZsEqDl_DvyehKgygy_yk1gH1UOUFQUUdJSjlETUdRQkxMQUVaOFBYRTdVQi4u","https://customervoice.microsoft.com/","https://mfpembedcdnweu.azureedge.net/mfpembedcontweu/","true");
+      var context = {"First Name": FirstName,"Last Name": LastName,"application": application,"pstep": pstep,};
+      se.renderButton( context);}
+      
+      </script>
   </body>
 </html>

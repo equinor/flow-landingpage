@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: flow-landpage-test
+  name: flow-landingpage
 spec:
   environments:
     - name: dev
@@ -17,24 +17,35 @@ spec:
           port: 6379
     - name: frontend
       src: frontend
-      secrets:
-        - APIM_SUB_KEY
-        - APIM_HOST
+      authentication:
+        oauth2:
+          clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
+          scope: openid profile email offline_access 25bb4326-cdc1-4048-8306-29d9fe1102a4/user_impersonation
+          setXAuthRequestHeaders: true
+          setAuthorizationHeader: false
+          sessionStoreType: redis
+          redisStore:
+             connectionUrl: redis://redis:6379
       publicPort: http
       ports:
         - name: http
           port: 8001
-      environmentConfig:
-        - environment: dev
-          authentication:
-            oauth2:
-              clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
-              scope: openid profile email offline_access
-              setXAuthRequestHeaders: true
-              setAuthorizationHeader: false
-              sessionStoreType: redis
-              redisStore:
-                connectionUrl: redis://redis:6379
+
   dnsAppAlias:
     environment: dev
     component: frontend
+  
+  dnsExternalAlias:
+    - alias: flow-dev.equinor.com 
+      environment: dev
+      component: frontend
+    - alias: flow-qa.equinor.com
+      environment: dev
+      component: frontend
+    - alias: flow.equinor.com
+      environment: dev
+      component: frontend
+    - alias: pega.equinor.com
+      environment: dev
+      component: frontend
+

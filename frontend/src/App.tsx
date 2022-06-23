@@ -1,8 +1,10 @@
 import {Route, BrowserRouter, Routes} from "react-router-dom";
+import { Helmet } from 'react-helmet';
 import NavBar from './components/navbar';
 import Home from './pages/home';
-import EPN from './pages/epn';
+import Info from './pages/info';
 import './App.css';
+
 
 function App() {
 
@@ -14,11 +16,13 @@ function App() {
         <div className="content">
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/epn" element={<EPN />} />  
+            <Route path="/info" element={<Info />} />  
         </Routes>
         </div>
       </div>
+
     </BrowserRouter>
+    
   )
 }
 

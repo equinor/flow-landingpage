@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { TopBar, Button, Tabs } from '@equinor/eds-core-react';
 import { Sparklines, SparklinesBars, SparklinesLine  } from 'react-sparklines';
 import './navbar.css';
-import flowlogo from '/flowlogo.png';
+import flowlogo from '/public/flowlogo.png';
 
   
 const NavBar = () => {

@@ -6,7 +6,7 @@ const Popup = (props:any) => {
 
     const closeHandler = (e:any) => {
         setShow(false);
-        e.onClose(false);
+        //e.onClose(false);
     };
 
     useEffect(() => {

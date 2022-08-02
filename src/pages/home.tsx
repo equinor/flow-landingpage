@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Icon, Card, Typography, Button } from '@equinor/eds-core-react'
+import { Banner } from '@equinor/eds-core-react'
 import Popup from '../components/popup';
 import './pages.css'
-import { beat, platform } from "@equinor/eds-icons"
-Icon.add({ beat, platform });
+import { beat, platform,thumbs_down } from "@equinor/eds-icons"
+import GetUserAccess from '../services/maint.useraccess'
+Icon.add({ beat, platform,thumbs_down });
 declare var renderSurvey: any;
 
 const Info = () => {
@@ -14,6 +16,10 @@ const Info = () => {
   const popupCloseHandler = (e:any) => {
     setVisibility(e);
   };
+
+  const popupOpenHandler = (e:any) => {
+    setVisibility(e)
+  }
 
   const openPage = (url: string) => {
     window.open(url);
@@ -46,7 +52,7 @@ const Info = () => {
         </Card.Header>
         <Card.Actions>
           
-          <Button type="button" color="secondary" onClick={(e) => setVisibility(!visibility)}>
+          <Button type="button" color="secondary" onClick={(e) => popupOpenHandler(e)}>
             Test access
             <Icon name="beat"></Icon>
           </Button>
@@ -66,6 +72,12 @@ const Info = () => {
 
   return (
     <div>
+          <Banner>
+      <Banner.Icon variant="warning">
+        <Icon name="thumbs_down" />
+      </Banner.Icon>
+      <Banner.Message>Currently issues with SAP API</Banner.Message>
+    </Banner>
       <br />
       <div className="panelCards">
         {appsList}
@@ -74,8 +86,7 @@ const Info = () => {
         onClose={popupCloseHandler}
         show={visibility}
         title="Testing access">
-        <h1>Hello This is Popup Content Area</h1>
-        <h2>This is my lorem ipsum text here!</h2>
+       <GetUserAccess />
       </Popup>
       {renderSurvey("","","landingpage","home")}
 

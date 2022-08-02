@@ -1,71 +1,69 @@
-version: "3.5"
-
-networks:
-  radix-example-front-proxy:
-    name: radix-example-front-proxy
-
+version: "3.8"
 services:
-
-  frontend:    
-    image: node:17.5.0-alpine
-    container_name: radix-web_container
+  web:    
+    image: node:16-alpine
+    container_name: web
     stdin_open: true # because of https://github.com/facebook/create-react-app/issues/8688
     working_dir: /app
-    command: [ "sh", "-c", "yarn && yarn dev" ]
+    command: [ "sh", "-c", "yarn && chown -R node:node node_modules && yarn dev" ]
     #environment:
         #- npm_config_proxy=${NPM_PROXY}
     volumes:
       - type: bind
-        source: ./frontend
+        source: .
         target: /app
-      - type: bind
-        source: ./frontend/node_modules
+      - type: volume
+        source: node-modules
         target: /app/node_modules
     networks:
-      - radix-example-front-proxy
+      - radix
     ports:
       - "3000:3000"
       #- "9222:9222"
 
   proxy:
     image: nginxinc/nginx-unprivileged:1.18
-    container_name: radix-proxy_container
+    container_name: proxy
     environment:
-      - APIM_SUB_KEY=${APIM_SUB_KEY_TEST}
-      - APIM_HOST=${APIM_HOST_TEST}
+      - APIM_SUB_KEY=${APIM_SUB_KEY}
+      - API_BASE_URL=${API_BASE_URL}
+      - EPN_URI=${EPN_URI}
+      - FLX_URI=${FLX_URI}
+      - PROJECTS_URI=${PROJECTS_URI}
+      - SCM_URI=${SCM_URI}
     volumes:
       - type: bind
-        source: ./frontend/nginx.dev.conf
+        source: ./proxy/server.dev.conf
         target: /default.conf
       - type: bind
-        source: ./frontend/run_nginx.sh
+        source: ./proxy/run_nginx.sh
         target: /run_nginx.sh
     command: [ "/bin/bash", "-c", ". run_nginx.sh" ]
     networks:
-      - radix-example-front-proxy
+      - radix
     ports:
       - "8080:8080"
 
   auth-state:
     image: redis:5-alpine
-    container_name: radix-example-front-proxy-state_container
+    container_name: auth-state
     networks:
-      - radix-example-front-proxy
+      - radix
     ports:
       - "6379:6379"
 
   auth:
     image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
-    container_name: radix-example-front-proxy-auth_container
+    container_name: auth
     environment:
-      - OAUTH2_PROXY_PROVIDER=oidc # https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc
-      - OAUTH2_PROXY_OIDC_ISSUER_URL=https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/v2.0
+      - OAUTH2_PROXY_PROVIDER=oidc
+      - OAUTH2_PROXY_OIDC_ISSUER_URL=https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/oauth2/v2.0/token
       - OAUTH2_PROXY_CLIENT_ID=${OAUTH2_PROXY_CLIENT_ID}
       - OAUTH2_PROXY_CLIENT_SECRET=${OAUTH2_PROXY_CLIENT_SECRET}
       - OAUTH2_PROXY_COOKIE_SECRET=${OAUTH2_PROXY_COOKIE_SECRET}
-      - OAUTH2_PROXY_SCOPE=openid email offline_access ${API_MAINTENANCE_SCOPE}
-      - OAUTH2_PROXY_REDIRECT_URL=http://localhost:8000/oauth2/callback
-      - OAUTH2_PROXY_HTTP_ADDRESS=http://:8000
+      - OAUTH2_PROXY_SCOPE=openid profile email offline_access ${API_RESOURCE_ID}
+      - OAUTH2_PROXY_REDIRECT_URL=http://auth:8000/oauth2/callback
+      - OAUTH2_PROXY_HTTP_ADDRESS=http://auth:8000
       - OAUTH2_PROXY_UPSTREAMS=http://proxy:8080
       - OAUTH2_PROXY_COOKIE_REFRESH=60m
       - OAUTH2_PROXY_REDIS_CONNECTION_URL=redis://auth-state:6379 # Where to store session info (the auth-state component)
@@ -77,6 +75,13 @@ services:
       - OAUTH2_PROXY_PASS_HOST_HEADERS=false
       - OAUTH2_PROXY_SKIP_PROVIDER_BUTTON=true
     networks:
-      - radix-example-front-proxy
+      - radix
     ports:
       - "8000:8000" # In prod, this is served on port 443
+networks:
+  radix:
+    name: radix
+
+volumes:
+  node-modules:
+    name: radix-web_node-modules

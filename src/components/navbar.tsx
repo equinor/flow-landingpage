@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { TopBar, Button, Tabs } from '@equinor/eds-core-react';
 import { Sparklines, SparklinesBars, SparklinesLine  } from 'react-sparklines';
 import './navbar.css';
-import flowlogo from '/public/flowlogo.png';
 
   
 const NavBar = () => {
@@ -48,7 +47,7 @@ const NavBar = () => {
     return (
         <TopBar className={navbarClasses.join(" ")}>
             <TopBar.Header>
-                <Link to="/"><img className="flowlogo" src={flowlogo} alt="" /> </Link> 
+                <Link to="/"><img className="flowlogo" src="./public/flowlogo.png" alt="" /> </Link> 
             </TopBar.Header>
             <TopBar.Actions>
               <Button type="button" onClick={() => openPage("https://web.yammer.com/main/org/statoil.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMDk2OTkwODgzODQifQ/all")}>Release notes</Button>

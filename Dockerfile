@@ -1,11 +1,11 @@
-FROM node:16-alpine as builder
+FROM node:18-alpine3.16 as builder
 
 WORKDIR /app
 COPY . .
 RUN yarn
 RUN yarn build
 
-FROM nginxinc/nginx-unprivileged:1.21-alpine
+FROM nginxinc/nginx-unprivileged:1.23-alpine
 WORKDIR /app
 COPY --from=builder /app/dist ./app
 COPY proxy/server.conf /default.conf

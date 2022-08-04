@@ -7,7 +7,7 @@ RUN yarn build
 
 FROM nginxinc/nginx-unprivileged:1.23-alpine
 WORKDIR /app
-COPY --from=builder /app/dist ./app
+COPY --from=builder /app/dist .
 COPY proxy/server.conf /default.conf
 COPY proxy/run_nginx.sh run_nginx.sh
 USER 0

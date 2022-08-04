@@ -24,7 +24,7 @@ spec:
       ports:
         - name: http
           port: 8080
-      authenication:
+      authentication:
         oauth2:
           clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
           scope: openid profile email offline_access 1aee2186-b5f4-445a-bbf2-d28589ccb59a/MaintenanceAPIProd

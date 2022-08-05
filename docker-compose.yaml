@@ -2,6 +2,7 @@ version: "3.8"
 services:
   web:    
     image: node:16-alpine
+    platform: linux/arm64/v8
     container_name: web
     stdin_open: true # because of https://github.com/facebook/create-react-app/issues/8688
     working_dir: /app
@@ -22,7 +23,8 @@ services:
       #- "9222:9222"
 
   proxy:
-    image: nginxinc/nginx-unprivileged:1.18
+    image: nginxinc/nginx-unprivileged:1.23
+    platform: linux/arm64
     container_name: proxy
     environment:
       - APIM_SUB_KEY=${APIM_SUB_KEY}
@@ -46,6 +48,7 @@ services:
 
   auth-state:
     image: redis:5-alpine
+    platform: linux/arm64/v8
     container_name: auth-state
     networks:
       - radix
@@ -53,17 +56,17 @@ services:
       - "6379:6379"
 
   auth:
-    image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.0
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.1-arm64
     container_name: auth
     environment:
       - OAUTH2_PROXY_PROVIDER=oidc
-      - OAUTH2_PROXY_OIDC_ISSUER_URL=https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/oauth2/v2.0/token
+      - OAUTH2_PROXY_OIDC_ISSUER_URL=https://login.microsoftonline.com/3aa4a235-b6e2-48d5-9195-7fcf05b459b0/v2.0
       - OAUTH2_PROXY_CLIENT_ID=${OAUTH2_PROXY_CLIENT_ID}
       - OAUTH2_PROXY_CLIENT_SECRET=${OAUTH2_PROXY_CLIENT_SECRET}
       - OAUTH2_PROXY_COOKIE_SECRET=${OAUTH2_PROXY_COOKIE_SECRET}
       - OAUTH2_PROXY_SCOPE=openid profile email offline_access ${API_RESOURCE_ID}
-      - OAUTH2_PROXY_REDIRECT_URL=http://auth:8000/oauth2/callback
-      - OAUTH2_PROXY_HTTP_ADDRESS=http://auth:8000
+      - OAUTH2_PROXY_REDIRECT_URL=http://localhost:8000/oauth2/callback
+      - OAUTH2_PROXY_HTTP_ADDRESS=http://:8000
       - OAUTH2_PROXY_UPSTREAMS=http://proxy:8080
       - OAUTH2_PROXY_COOKIE_REFRESH=60m
       - OAUTH2_PROXY_REDIS_CONNECTION_URL=redis://auth-state:6379 # Where to store session info (the auth-state component)

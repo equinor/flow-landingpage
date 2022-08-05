@@ -1,5 +1,4 @@
 import {Route, BrowserRouter, Routes} from "react-router-dom";
-import { Helmet } from 'react-helmet';
 import NavBar from './components/navbar';
 import Home from './pages/home';
 import Info from './pages/info';

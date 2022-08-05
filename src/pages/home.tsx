@@ -72,12 +72,7 @@ const Info = () => {
 
   return (
     <div>
-          <Banner>
-      <Banner.Icon variant="warning">
-        <Icon name="thumbs_down" />
-      </Banner.Icon>
-      <Banner.Message>Currently issues with SAP API</Banner.Message>
-    </Banner>
+
       <br />
       <div className="panelCards">
         {appsList}

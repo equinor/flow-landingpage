@@ -6,10 +6,10 @@ spec:
   environments:
     - name: qa
       build:
-        from: dev
+        from: master
     - name: prod
       build: 
-        from: master
+        from: release
   components:
     - name: redis
       image: bitnami/redis:latest

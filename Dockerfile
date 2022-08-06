@@ -16,5 +16,3 @@ RUN chown -R nginx /etc/nginx/conf.d \
     && chmod +x run_nginx.sh
 USER 101
 CMD /bin/sh -c ". run_nginx.sh"
-
-#EXPOSE 8001

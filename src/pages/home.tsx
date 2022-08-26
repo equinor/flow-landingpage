@@ -83,7 +83,7 @@ const Info = () => {
         title="Testing access">
        <GetUserAccess />
       </Popup>
-      {renderSurvey("","","landingpage","home")}
+      
 
     </div>
   );

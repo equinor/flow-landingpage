@@ -2,7 +2,7 @@ version: "3.8"
 services:
   web:    
     image: node:16-alpine
-    platform: linux/arm64/v8
+    platform: linux/amd64
     container_name: web
     stdin_open: true # because of https://github.com/facebook/create-react-app/issues/8688
     working_dir: /app
@@ -20,11 +20,11 @@ services:
       - radix
     ports:
       - "3000:3000"
-      #- "9222:9222"
 
   proxy:
     image: nginxinc/nginx-unprivileged:1.23
-    platform: linux/arm64
+    #platform: linux/arm64
+    platform: linux/amd64
     container_name: proxy
     environment:
       - APIM_SUB_KEY=${APIM_SUB_KEY}
@@ -47,8 +47,8 @@ services:
       - "8080:8080"
 
   auth-state:
-    image: redis:5-alpine
-    platform: linux/arm64/v8
+    image: redis:5
+    platform: linux/amd64
     container_name: auth-state
     networks:
       - radix
@@ -56,7 +56,7 @@ services:
       - "6379:6379"
 
   auth:
-    image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.1-arm64
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.2.1
     container_name: auth
     environment:
       - OAUTH2_PROXY_PROVIDER=oidc

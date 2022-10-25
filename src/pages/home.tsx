@@ -52,10 +52,6 @@ const Info = () => {
         </Card.Header>
         <Card.Actions>
           
-          <Button type="button" color="secondary" onClick={(e) => popupOpenHandler(e)}>
-            Test access
-            <Icon name="beat"></Icon>
-          </Button>
           <Button type="button" onClick={() => openPage(element.link)}>
             Open
             <Icon name="platform"></Icon>
@@ -77,12 +73,7 @@ const Info = () => {
       <div className="panelCards">
         {appsList}
       </div>
-      <Popup
-        onClose={popupCloseHandler}
-        show={visibility}
-        title="Testing access">
-       <GetUserAccess />
-      </Popup>
+
       
 
     </div>

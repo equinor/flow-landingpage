@@ -37,6 +37,7 @@ spec:
         FLX_URI: "https://equinor-prod1.pegacloud.net/prweb/app/MaintenanceFLX/sso_login"
         SCM_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/FLX/sso_login"
         PROJECTS_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"
+        WOPREP_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/wo-preparation/sso_login"
       environmentConfig:
         - environment: prod
           variables:

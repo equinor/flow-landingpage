@@ -27,10 +27,11 @@ const Info = () => {
 
 
   const appsList = [
-    { title: "EPN - Maintenance PM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
-    { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
-    { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow.equinor.com/project" },
-    { title: "FLX - SCM", description: "", image: "/procurement.png", link: "https://flow.equinor.com/scm" }
+    { title: "EPN - Maintenance PM", description: "", image: "/grane.png", link: "https://flow-qa.equinor.com/epn" },
+    { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "https://flow-qa.equinor.com/flx" },
+    { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow-qa.equinor.com/project" },
+    { title: "FLX - SCM", description: "", image: "/procurement.png", link: "https://flow-qa.equinor.com/scm" },
+    { title: "FLX - Work Order Preparation", description: "", image: "/woprep.png", link: "https://flow-qa.equinor.com/wo-preparation" }
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "350px" };
 

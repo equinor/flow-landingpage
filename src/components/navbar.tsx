@@ -56,7 +56,6 @@ const NavBar = () => {
             </TopBar.Actions>
             <TopBar.CustomContent>
 
-                
             </TopBar.CustomContent>
         </TopBar>
     );

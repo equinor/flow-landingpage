@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { TopBar, Button, Tabs } from '@equinor/eds-core-react';
-import { Sparklines, SparklinesBars, SparklinesLine  } from 'react-sparklines';
+import { TopBar, Button, Label, Icon } from '@equinor/eds-core-react';
+import { warning_filled } from '@equinor/eds-icons'
+
 import './navbar.css';
 
   
@@ -55,7 +56,11 @@ const NavBar = () => {
               <Button type="button" onClick={() => openPage("https://statoilsrm.sharepoint.com/:f:/r/sites/NWOW-iBPM/Shared%20Documents/%C3%85pent%20innhold%20til%20nettside%20og%20deling%20internt?csf=1&web=1&e=Nngqnj")}>Documentation</Button>
             </TopBar.Actions>
             <TopBar.CustomContent>
-
+              <tr>
+                <td class="qatd"><Icon data={warning_filled} size={24} /> </td>
+                <td class="qatd"><Label className="qatext" label="TEST" /></td>
+              </tr>
+            
             </TopBar.CustomContent>
         </TopBar>
     );

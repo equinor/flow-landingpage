@@ -47,6 +47,7 @@ spec:
             SCM_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/FLX/sso_login"
             PROJECTS_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"
             WOPREP_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/wo-preparation/sso_login"
+            M5LCI_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
@@ -59,6 +60,7 @@ spec:
             SCM_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/FLX/sso_login"
             PROJECTS_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"
             WOPREP_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/wo-preparation/sso_login"
+            M5LCI_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90

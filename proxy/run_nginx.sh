@@ -8,6 +8,7 @@ ${FLX_URI}
 ${PROJECTS_URI}
 ${SCM_URI}
 ${WOPREP_URI}
+${M5LCI_URI}
 ' </default.conf > /etc/nginx/conf.d/tmp.conf
 
 mv /etc/nginx/conf.d/tmp.conf /etc/nginx/conf.d/default.conf

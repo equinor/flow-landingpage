@@ -32,7 +32,7 @@ const Info = () => {
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow.equinor.com/project" },
     { title: "FLX - SCM", description: "", image: "/procurement.png", link: "https://flow.equinor.com/scm" },
     { title: "FLX - Work Order Preparation", description: "", image: "/woprep.jpg", link: "https://flow.equinor.com/wo-preparation" },
-    { title: "EPN/FLX - M5 LCI", description: "", image: "/m5.jpg", link: "https://flow.equinor.com/m5lci" }
+    { title: "EPN/FLX - M5 LCI", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "https://flow.equinor.com/m5lci" }
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "350px" };
 

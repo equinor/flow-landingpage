@@ -50,7 +50,7 @@ spec:
             M5LCI_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
           authentication:
             oauth2:
-              clientId: 33c482f2-1e7b-4f5c-8ace-906558f6850c
+              clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
               scope: openid profile email offline_access 1aee2186-b5f4-445a-bbf2-d28589ccb59a/MaintenanceAPIProd
         - environment: qa
           variables:

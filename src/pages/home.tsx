@@ -27,7 +27,7 @@ const Info = () => {
 
 
   const appsList = [
-    { title: "EPN - Maintenance PM & CM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
+    { title: "EPN/MMP - Maintenance PM & CM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
     { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow.equinor.com/project" },
     { title: "FLX - SCM", description: "", image: "/procurement.png", link: "https://flow.equinor.com/scm" },

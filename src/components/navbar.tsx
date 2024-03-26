@@ -53,7 +53,7 @@ const NavBar = () => {
             <TopBar.Actions>
             <Button type="button" onClick={() => openPage("https://web.yammer.com/main/org/statoil.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMDk2OTkwODgzODQifQ/all")}>Viva Engage</Button>
             &nbsp;
-              <Button type="button" onClick={() => openPage("https://statoilsrm.sharepoint.com/:f:/r/sites/NWOW-iBPM/Shared%20Documents/%C3%85pent%20innhold%20til%20nettside%20og%20deling%20internt?csf=1&web=1&e=Nngqnj")}>Documentation</Button>
+              <Button type="button" onClick={() => openPage("https://statoilsrm.sharepoint.com/sites/FLOWconcept")}>FLOW Sharepoint</Button>
             </TopBar.Actions>
             <TopBar.CustomContent>
               <tr>

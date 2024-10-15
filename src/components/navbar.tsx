@@ -51,9 +51,11 @@ const NavBar = () => {
                 <Link to="/"><img className="flowlogo" src="/flowlogo.png" alt="" /> </Link> 
             </TopBar.Header>
             <TopBar.Actions>
+            <Button type="button" onClick={() => openPage("https://equinor.service-now.com/selfservice?id=sc_cat_item&table=sc_cat_item&sys_id=07b538e11b6f2190cb5add72b24bcb8e")}>Report error/improvement</Button>
+            &nbsp;              
             <Button type="button" onClick={() => openPage("https://web.yammer.com/main/org/statoil.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMDk2OTkwODgzODQifQ/all")}>Viva Engage</Button>
             &nbsp;
-              <Button type="button" onClick={() => openPage("https://statoilsrm.sharepoint.com/sites/FLOWconcept")}>FLOW Sharepoint</Button>
+              <Button type="button" onClick={() => openPage(" https://statoilsrm.sharepoint.com/sites/FLOWconcept")}>FLOW Sharepoint</Button>
             </TopBar.Actions>
             <TopBar.CustomContent>
               <tr>

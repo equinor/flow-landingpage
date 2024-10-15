@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { TopBar, Button, Tabs } from '@equinor/eds-core-react';
-import { Sparklines, SparklinesBars, SparklinesLine  } from 'react-sparklines';
+import { TopBar, Button, Label, Icon } from '@equinor/eds-core-react';
+import { warning_filled } from '@equinor/eds-icons'
+
 import './navbar.css';
 
   
@@ -57,7 +58,11 @@ const NavBar = () => {
               <Button type="button" onClick={() => openPage(" https://statoilsrm.sharepoint.com/sites/FLOWconcept")}>FLOW Sharepoint</Button>
             </TopBar.Actions>
             <TopBar.CustomContent>
-
+              <tr>
+                <td className="qatd"><Icon data={warning_filled} size={24} /> </td>
+                <td className="qatd"><Label className="qatext" label="TEST" /></td>
+              </tr>
+            
             </TopBar.CustomContent>
         </TopBar>
     );

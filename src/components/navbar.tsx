@@ -60,7 +60,6 @@ const NavBar = () => {
             <TopBar.CustomContent>
               <tr>
                 <td className="qatd"><Icon data={warning_filled} size={24} /> </td>
-                <td className="qatd"><Label className="qatext" label="TEST" /></td>
               </tr>
             
             </TopBar.CustomContent>

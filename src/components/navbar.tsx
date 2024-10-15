@@ -57,11 +57,7 @@ const NavBar = () => {
             &nbsp;
               <Button type="button" onClick={() => openPage(" https://statoilsrm.sharepoint.com/sites/FLOWconcept")}>FLOW Sharepoint</Button>
             </TopBar.Actions>
-            <TopBar.CustomContent>
-              <tr>
-                <td className="qatd"><Icon data={warning_filled} size={24} /> </td>
-              </tr>
-            
+            <TopBar.CustomContent>            
             </TopBar.CustomContent>
         </TopBar>
     );

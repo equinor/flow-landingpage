@@ -61,10 +61,10 @@ spec:
             PROJECTS_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"
             WOPREP_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/wo-preparation/sso_login"
             M5LCI_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
-          authentication:
-            oauth2:
-              clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
-              scope: openid profile email offline_access ad711600-154b-4ab0-8945-06cba7f10c4b/MaintenanceAPIQA
+          # authentication:
+          #  oauth2:
+          #    clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
+          #    scope: openid profile email offline_access ad711600-154b-4ab0-8945-06cba7f10c4b/MaintenanceAPIQA
 
   dnsAppAlias:
     environment: prod

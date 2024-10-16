@@ -40,7 +40,7 @@ const Info = () => {
     return (
       <Card style={style} key={index}>
         <Card.Media>
-          <img src={element.image}  width="320" height="240"/>
+          <img src={element.image}  width="240" height="180"/>
         </Card.Media>
         <Card.Header>
           <Card.HeaderTitle>

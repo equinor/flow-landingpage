@@ -8,8 +8,8 @@
 
 .panelCards {
     margin-top: 5px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;     
+    justify-content: center;  
+    gap: 15px;
   }

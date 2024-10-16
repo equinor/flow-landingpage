@@ -27,19 +27,20 @@ const Info = () => {
 
 
   const appsList = [
-    { title: "EPN/MMP - Maintenance PM & CM", description: "", image: "/grane.png", link: "https://flow.equinor.com/epn" },
-    { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "https://flow.equinor.com/flx" },
-    { title: "FLX - Projects", description: "", image: "/projects.png", link: "https://flow.equinor.com/project" },
-    { title: "FLX - SCM", description: "", image: "/procurement.png", link: "https://flow.equinor.com/scm" },
-    { title: "FLX - Work Order Preparation", description: "", image: "/woprep.jpg", link: "https://flow.equinor.com/wo-preparation" },
-    { title: "EPN/FLX - FLOW LCI M5", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "https://flow.equinor.com/m5lci" }
+    { title: "EPN/MMP - Maintenance PM & CM", description: "", image: "/grane.png", link: "/epn" },
+    { title: "EPN - Manage sickleave", description: "", image: "/msl.jpg", link: "/msl" },
+    { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "/flx" },
+    { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },
+    { title: "FLX - SCM", description: "", image: "/procurement.png", link: "/scm" },
+    { title: "FLX - Work Order Preparation", description: "", image: "/woprep.jpg", link: "/wo-preparation" },
+    { title: "EPN/FLX - FLOW LCI M5", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "/m5lci" }
   ].map((element, index) => {
-    const style = { gridColumn: "span 1", width: "350px" };
+    const style = { gridColumn: "span 1", width: "400px" };
 
     return (
       <Card style={style} key={index}>
         <Card.Media>
-          <img src={element.image} />
+          <img src={element.image}  width="320" height="240"/>
         </Card.Media>
         <Card.Header>
           <Card.HeaderTitle>

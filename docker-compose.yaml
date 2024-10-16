@@ -35,6 +35,7 @@ services:
       - SCM_URI=${SCM_URI}
       - WOPREP_URI=${WOPREP_URI}
       - M5LCI_URI=${M5LCI_URI}
+      - MSL_URI=${MSL_URI}
     volumes:
       - type: bind
         source: ./proxy/server.dev.conf

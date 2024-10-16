@@ -45,3 +45,5 @@ dist-ssr
 *.sw?
 assets/
 secrets/
+
+.DS_Store

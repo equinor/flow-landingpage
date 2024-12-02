@@ -28,7 +28,8 @@ const Info = () => {
 
   const appsList = [
     { title: "EPN/MMP - Maintenance PM & CM", description: "", image: "/grane.png", link: "/epn" },
-    { title: "EPN - Manage sickleave", description: "", image: "/msl.png", link: "/msl" },
+    { title: "EPN - Manage sickleave", description: "", image: "/msl.jpg", link: "/msl" },
+    { title: "EPN - Early Phase Field Development", description: "", image: "/EPF_Tile_Image.jpg", link: "/epf" },
     { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },
     { title: "FLX - SCM", description: "", image: "/procurement.png", link: "/scm" },

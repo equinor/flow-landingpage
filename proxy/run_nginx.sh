@@ -11,6 +11,7 @@ ${WOPREP_URI}
 ${M5LCI_URI}
 ${MSL_URI}
 ${EPF_URI}
+${BL_URI}
 ' </default.conf > /etc/nginx/conf.d/tmp.conf
 
 mv /etc/nginx/conf.d/tmp.conf /etc/nginx/conf.d/default.conf

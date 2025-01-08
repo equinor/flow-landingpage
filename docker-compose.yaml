@@ -37,6 +37,7 @@ services:
       - M5LCI_URI=${M5LCI_URI}
       - MSL_URI=${MSL_URI}
       - EPF_URI=${EPF_URI}
+      - BL_URI=${BL_URI}
     volumes:
       - type: bind
         source: ./proxy/server.dev.conf

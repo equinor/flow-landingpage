@@ -34,7 +34,7 @@ const Info = () => {
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },
     { title: "FLX - SCM", description: "", image: "/procurement.png", link: "/scm" },
     { title: "FLX - Work Order Preparation", description: "", image: "/woprep.jpg", link: "/wo-preparation" },
-    { title: "Blue Light", description: "", image: "/BLUE LIGHT.jpeg", link: "/bl" },
+    { title: "Deviation Support (Blue light)", description: "", image: "/BLUE LIGHT.jpeg", link: "/bl" },
     { title: "EPN/FLX - FLOW LCI M5", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "/m5lci" }
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "400px" };

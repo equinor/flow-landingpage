@@ -50,7 +50,7 @@ spec:
             M5LCI_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
             MSL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/SickLeave/sso_login"
             EPF_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/EPF/sso_login"
-            BL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/blue-light"
+            BL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/blue-light/sso_login/"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
@@ -66,7 +66,7 @@ spec:
             M5LCI_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
             MSL_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/SickLeave/sso_login"
             EPF_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/EPF/sso_login"
-            BL_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/blue-light"
+            BL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/blue-light/sso_login/"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90

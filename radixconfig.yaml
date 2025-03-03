@@ -80,9 +80,11 @@ spec:
     - alias: flow-qa.equinor.com
       environment: qa
       component: web
+      useCertificateAutomation: true
     - alias: flow.equinor.com
       environment: prod
       component: web
+      useCertificateAutomation: true
     - alias: pega.equinor.com
       environment: prod
       component: web

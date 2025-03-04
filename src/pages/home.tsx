@@ -27,13 +27,13 @@ const Info = () => {
 
 
   const appsList = [
-    { title: "EPN/MMP - Maintenance PM & CM", description: "", image: "/grane.png", link: "/epn" },
+    { title: "EPN/MMP/EPI - Maintenance PM & CM", description: "", image: "/grane.png", link: "/epn" },
     { title: "EPN - Manage sickleave", description: "", image: "/msl.png", link: "/msl" },
     { title: "EPN - Early Phase Field Development", description: "", image: "/EPF_Tile_Image.jpeg", link: "/epf" },
     { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },
     { title: "FLX - SCM", description: "", image: "/procurement.png", link: "/scm" },
-    { title: "FLX - Work Order Preparation", description: "", image: "/woprep.jpg", link: "/wo-preparation" },
+    { title: "FLX/EPN - Work Order Preparation", description: "", image: "/woprep.jpg", link: "/wo-preparation" },
     { title: "Deviation Support (Blue Light)", description: "", image: "/BLUE LIGHT.jpeg", link: "/bl" },
     { title: "EPN/FLX - FLOW LCI M5", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "/m5lci" }
   ].map((element, index) => {

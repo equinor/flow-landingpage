@@ -36,7 +36,7 @@ const Info = () => {
     { title: "FLX/EPN - Work Order Preparation", description: "", image: "/woprep.jpg", link: "/wo-preparation" },
     { title: "Deviation Support (Blue Light)", description: "", image: "/BLUE LIGHT.jpeg", link: "/bl" },
     { title: "EPN/FLX - FLOW LCI M5", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "/m5lci" },
-    { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpeg", link: "/PLANSHUT" },
+    { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpg", link: "/PLANSHUT" },
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "400px" };
 

@@ -38,6 +38,7 @@ services:
       - MSL_URI=${MSL_URI}
       - EPF_URI=${EPF_URI}
       - BL_URI=${BL_URI}
+      - PLANSHUT_URI=${PLANSHUT_URI}
     volumes:
       - type: bind
         source: ./proxy/server.dev.conf

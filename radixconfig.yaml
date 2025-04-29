@@ -51,6 +51,7 @@ spec:
             MSL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/SickLeave/sso_login"
             EPF_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/EPF/sso_login"
             BL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/blue-light/sso_login/"
+            PLANSHUT_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/pit-stop/"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90
@@ -67,6 +68,7 @@ spec:
             MSL_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/SickLeave/sso_login"
             EPF_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/EPF/sso_login"
             BL_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/blue-light/sso_login/"
+            PLANSHUT_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/pit-stop/"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90

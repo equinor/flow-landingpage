@@ -32,8 +32,6 @@ const Info = () => {
     { title: "EPN - Early Phase Field Development", description: "", image: "/EPF_Tile_Image.jpeg", link: "/epf" },
     { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },
-    { title: "FLX - SCM", description: "", image: "/procurement.png", link: "/scm" },
-    { title: "FLX/EPN - Work Order Preparation", description: "", image: "/woprep.jpg", link: "/wo-preparation" },
     { title: "Deviation Support (Blue Light)", description: "", image: "/BLUE LIGHT.jpeg", link: "/bl" },
     { title: "EPN/FLX - FLOW LCI M5", description: "Requires YO900 role in SAP", image: "/m5.jpg", link: "/m5lci" },
     { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpg", link: "/PLANSHUT" },

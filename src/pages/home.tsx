@@ -71,31 +71,3 @@ const Info = () => {
 };
 
 export default Info;
-
-/* -------------------------- ADD THIS TO pages.css -------------------------- */
-
-.sparkly-title {
-  font-weight: bold;
-  font-size: 2.5rem;
-  background: linear-gradient(
-    90deg,
-    #fff 0%,
-    #ffe066 25%,
-    #ff9de6 50%,
-    #9ecbff 75%,
-    #fff 100%
-  );
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: shimmer 3s infinite linear;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}

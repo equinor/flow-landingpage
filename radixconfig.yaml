@@ -43,7 +43,7 @@ spec:
             EPN_URI: "https://equinor-prod1.pegacloud.net/prweb/app/MaintenanceEPN/sso_login"
             FLX_URI: "https://equinor-prod1.pegacloud.net/prweb/app/MaintenanceFLX/sso_login"
             PROJECTS_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"
-            M5LCI_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/lciv2"
+            M5LCI_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/lci/sso_login"
             MSL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/SickLeave/sso_login"
             EPF_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/EPF/sso_login"
             BL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/blue-light/sso_login/"

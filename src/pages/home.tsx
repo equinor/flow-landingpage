@@ -34,8 +34,8 @@ const Info = () => {
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },
     { title: "Deviation Support (Blue Light)", description: "", image: "/BLUE LIGHT.jpeg", link: "/bl" },
     { title: "EPN/FLX - FLOW M5 for LCI & Spare Parts", description: "Requires YO900 role in SAP", image: "/m5.png", link: "/m5lci" },
-    { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpg", link: "/PLANSHUT" }
-    { title: "EPN - EMOD", description: "", image: "/EMOD.png", link: "/EMOD" }
+    { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpg", link: "/PLANSHUT" },
+    { title: "EPN - EMOD", description: "", image: "/EMOD.png", link: "/EMOD" },
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "400px" };
 

@@ -52,7 +52,7 @@ spec:
             EPF_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/EPF/sso_login"
             BL_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/blue-light/sso_login/"
             PLANSHUT_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/pit-stop/"
-            EMOD_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/emod"
+            EMOD_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/emod"
           authentication:
             oauth2:
               clientId: d826142e-d4f6-4664-b463-6d99fc81fb90

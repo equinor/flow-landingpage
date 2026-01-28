@@ -12,6 +12,7 @@ ${EPF_URI}
 ${BL_URI}
 ${PLANSHUT_URI}
 ${EMOD_URI}
+${FISCAL_URI}
 ' </default.conf > /etc/nginx/conf.d/tmp.conf
 
 mv /etc/nginx/conf.d/tmp.conf /etc/nginx/conf.d/default.conf

@@ -33,6 +33,7 @@ const Info = () => {
     { title: "EPN/FLX - FLOW M5 for LCI & Spare Parts", description: "Requires YO900 role in SAP", image: "/m5.png", link: "/m5lci" },
     { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpg", link: "/PLANSHUT" },
     { title: "EPN - EMOD", description: "", image: "/EMOD.png", link: "/EMOD" },
+    { title: "Fiscal Monthly Reporting", description: "", image: "/Fiscal Monthly Reporting.png", link: "/FISCAL" },
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "400px" };
 

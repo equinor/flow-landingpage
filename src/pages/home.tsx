@@ -1,30 +1,27 @@
 import React, { useState } from "react";
-import { Icon, Card, Typography, Button } from '@equinor/eds-core-react'
-import { Banner } from '@equinor/eds-core-react'
-import Popup from '../components/popup';
-import './pages.css'
-import { beat, platform,thumbs_down } from "@equinor/eds-icons"
-import GetUserAccess from '../services/maint.useraccess'
-Icon.add({ beat, platform,thumbs_down });
+import { Icon, Card, Typography, Button } from "@equinor/eds-core-react";
+import { Banner } from "@equinor/eds-core-react";
+import Popup from "../components/popup";
+import "./pages.css";
+import { beat, platform, thumbs_down } from "@equinor/eds-icons";
+import GetUserAccess from "../services/maint.useraccess";
+Icon.add({ beat, platform, thumbs_down });
 declare var renderSurvey: any;
 
 const Info = () => {
-
-
   const [visibility, setVisibility] = useState(false);
 
-  const popupCloseHandler = (e:any) => {
+  const popupCloseHandler = (e: any) => {
     setVisibility(e);
   };
 
-  const popupOpenHandler = (e:any) => {
-    setVisibility(e)
-  }
+  const popupOpenHandler = (e: any) => {
+    setVisibility(e);
+  };
 
   const openPage = (url: string) => {
     window.open(url);
   };
-
 
   const appsList = [
     { title: "EPN/MMP/EPI - Maintenance PM & CM", description: "", image: "/grane.png", link: "/epn" },
@@ -43,47 +40,36 @@ const Info = () => {
     return (
       <Card style={style} key={index}>
         <Card.Media>
-          <img src={element.image}  width="320" height="240"/>
+          <img src={element.image} width="240" height="180" />
         </Card.Media>
         <Card.Header>
           <Card.HeaderTitle>
-            <Typography variant="h5">
-              {element.title}
-            </Typography>
-            <Typography variant="body_short">
-              {element.description}
-            </Typography>
+            <Typography variant="h5">{element.title}</Typography>
+            <Typography variant="body_short">{element.description}</Typography>
           </Card.HeaderTitle>
-
         </Card.Header>
         <Card.Actions>
-          
           <Button type="button" onClick={() => openPage(element.link)}>
             Open
             <Icon name="platform"></Icon>
           </Button>
         </Card.Actions>
-      
       </Card>
     );
-
   });
-
-
-
 
   return (
     <div>
+      {/* Sparkly Title */}
+      <Typography variant="h2" className="sparkly-title">
+        PROD
+      </Typography>
 
       <br />
-      <div className="panelCards">
-        {appsList}
-      </div>
 
-      
-
+      <div className="panelCards">{appsList}</div>
     </div>
   );
-}
+};
 
-export default Info
+export default Info;

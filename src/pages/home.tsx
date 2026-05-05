@@ -25,7 +25,7 @@ const Info = () => {
 
   const appsList = [
     { title: "EPN/MMP/EPI - Maintenance PM & CM", description: "", image: "/grane.png", link: "/epn" },
-    { title: "EPN - Manage sickleave", description: "", image: "/msl.png", link: "/msl" },
+    { title: "EPN - Manage sickleave", description: "", image: "/msl.jpg", link: "/msl" },
     { title: "EPN - Early Phase Field Development", description: "", image: "/EPF_Tile_Image.jpeg", link: "/epf" },
     { title: "FLX - Maintenance PM & CM", description: "", image: "/statfjord.png", link: "/flx" },
     { title: "FLX - Projects", description: "", image: "/projects.png", link: "/project" },

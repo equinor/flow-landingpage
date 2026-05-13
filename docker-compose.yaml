@@ -39,6 +39,7 @@ services:
       - PLANSHUT_URI=${PLANSHUT_URI}
       - EMOD_URI=${EMOD_URI}
       - FISCAL_URI=${FISCAL_URI}
+      - O2P_URI=${O2P_URI}  
     volumes:
       - type: bind
         source: ./proxy/server.dev.conf

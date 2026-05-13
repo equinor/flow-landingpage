@@ -34,6 +34,7 @@ const Info = () => {
     { title: "EPN/FLX - Planned Shutdown", description: "", image: "/PLANSHUT.jpg", link: "/PLANSHUT" },
     { title: "EPN - EMOD", description: "", image: "/EMOD.png", link: "/EMOD" },
     { title: "Fiscal Monthly Reporting", description: "", image: "/Fiscal Monthly Reporting.png", link: "/FISCAL" },
+    { title: "EPN - FLOW O2P", description: "", image: "/O2P.jpg", link: "/O2P" },
   ].map((element, index) => {
     const style = { gridColumn: "span 1", width: "400px" };
 

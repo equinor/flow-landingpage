@@ -40,6 +40,8 @@ services:
       - EMOD_URI=${EMOD_URI}
       - FISCAL_URI=${FISCAL_URI}
       - O2P_URI=${O2P_URI}
+      - VMM_URI=${VMM_URI}
+
     volumes:
       - type: bind
         source: ./proxy/server.dev.conf

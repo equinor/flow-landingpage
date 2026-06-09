@@ -44,6 +44,7 @@ spec:
         - environment: prod
           variables:
             API_BASE_URL: "https://api.gateway.equinor.com/maintenance-api/"
+            APIM_SUB_KEY: "REPLACE_WITH_APIM_SUB_KEY"
             EPN_URI: "https://equinor-prod1.pegacloud.net/prweb/app/MaintenanceEPN/sso_login"
             FLX_URI: "https://equinor-prod1.pegacloud.net/prweb/app/MaintenanceFLX/sso_login"
             PROJECTS_URI: "https://equinor-prod1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"
@@ -63,6 +64,7 @@ spec:
         - environment: qa
           variables:
             API_BASE_URL: "https://api-test.gateway.equinor.com/maintenance-api/"
+            APIM_SUB_KEY: "REPLACE_WITH_APIM_SUB_KEY"
             EPN_URI: "https://equinor-stg1.pegacloud.net/prweb/app/MaintenanceEPN/sso_login"
             FLX_URI: "https://equinor-stg1.pegacloud.net/prweb/app/MaintenanceFLX/sso_login"
             PROJECTS_URI: "https://equinor-stg1.pegacloud.net/prweb/PRAuth/app/Procurement/sso_login"

@@ -64,7 +64,7 @@ const Info = () => {
     <div>
       {/* Sparkly Title */}
       <Typography variant="h2" className="sparkly-title">
-        PROD
+        PROD_
       </Typography>
 
       <br />
